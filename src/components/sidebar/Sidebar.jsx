@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import "./sidebar.css";
-
-
 
 export default class Sidebar extends Component {
   constructor(props) {
@@ -37,7 +34,7 @@ export default class Sidebar extends Component {
     return (
       <div className="sidebar">
         <div className="sidebarItem">
-          <span className="loginTitle">How many miles you drove for this trip?</span>
+          <span className="loginTitle">How many miles you drove for the trip?</span>
         </div>
         <div className="sidebarItem">
         <form className="loginForm">
@@ -62,7 +59,7 @@ export default class Sidebar extends Component {
             <p>grams of CO2</p>
           </div>
           <div className="result">
-            <p>A single tree in Mangrove restoration needs</p>
+            <p>A single tree in mangrove restoration needs</p>
             <p className="data">{this.state.time}</p>
             <p>days to absorb it</p>
           </div>
@@ -71,18 +68,6 @@ export default class Sidebar extends Component {
     );
   }
 }
-
-/*
-references
-https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle#:~:text=typical%20passenger%20vehicle%3F-,A%20typical%20passenger%20vehicle%20emits%20about%204.6%20metric%20tons%20of,8%2C887%20grams%20of%20CO2.
-8,887g/22 miles of CO2 produced
-
-
-Mangrove restoration absorbs 23.1 t CO2/ha/year
-1000 trees per hectare
-
-1t = 1000000 gram
-*/
 
 
 

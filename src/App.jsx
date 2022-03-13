@@ -13,12 +13,14 @@ const data = [
 ]
 
 function App() {
-  const currentUser = true;
   return (
     <Router>
       <Topbar />
       <Switch>
         <Route exact path="/">
+          <Homepage data={data}/>
+        </Route>
+        <Route path="/homepage">
           <Homepage data={data}/>
         </Route>
         <Route path="/posts">

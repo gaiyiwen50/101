@@ -11,8 +11,9 @@ export default function Homepage({data}) {
     <>
       <Header />
       <div className="home">
-        <Posts data={data}/>
         <Sidebar />
+        <Posts data={data}/>
+        
       </div>
     </>
   );

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./singlePost.css";
 import { useLocation } from "react-router";
 
