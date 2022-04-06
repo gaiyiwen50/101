@@ -1,4 +1,4 @@
-.top {
+.top-bar {
   width: 100%;
   height: 50px;
   background-color: white;
@@ -6,29 +6,18 @@
   top: 0;
   align-items: center;
   z-index: 999;
-  font-family: "Josefin Sans", sans-serif;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-.topLeft 
-{
-  margin: 20px;
+.top-left {
   margin-left: 60px;
-  float: left;
-  justify-content: center;
 }
 
-.topIcon {
+.top-icon {
   margin-right: 15px;
   color: #444;
   cursor: pointer;
-}
-
-.topRight {
-  margin: 20px;
-  margin-right: 60px;
-  float: right;
-  color: gray;
-  font-size: 15px;
 }
 

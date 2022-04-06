@@ -1,5 +1,6 @@
-import "./singlePost.css";
-import { useLocation } from "react-router";
+import './singlePost.css';
+import '../../shared.css';
+import { useLocation } from 'react-router';
 
 export default function SinglePost({data}) {
   const location = useLocation();

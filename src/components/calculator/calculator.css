@@ -1,0 +1,179 @@
+
+/* .calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+} */
+
+.calculator {
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 60%;
+  box-shadow: 0px 4px 12px #ccc;
+  transition: all 1s linear;
+}
+.calculator.enlarged {
+  /* width: 80%; */
+}
+
+.calculator-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-title {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.calculator-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.calculator-form > * {
+  margin-top: 20px;
+}
+.calculator-form-label {
+  margin-right: 40px;
+}
+
+.fuel-type-selector {
+  display: flex;
+  align-items: center;
+}
+.fuel-type-option-list {
+  display: flex;
+}
+.fuel-type-option {
+  margin-right: 20px;
+  background-color: lightgray;
+  border: none;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
+.miles-per-gallon {
+  display: flex;
+  align-items: center;
+}
+
+.miles-per-day {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.submit-button {
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.submit-button:hover {
+  background-color: rgb(236, 148, 148);
+}
+.submit-button:disabled{
+  cursor: not-allowed;
+  background-color: lightcoral;
+}
+
+
+
+/* Calculator Output */
+
+.calculator-output {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 1s linear;
+}
+.calculator-output.visible {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  margin: 20px;
+  width: 20%;
+}
+
+.vertical-divider {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 0%;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #ccc;
+  transition: all 1s linear;
+}
+.vertical-divider.visible {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  height: 100%;
+}
+
+
+.emissions-comparison-title {
+  text-align: center;
+}
+.emissions-comparison-scale {
+  display: flex;
+  margin-top: 6px;
+}
+.emissions-comparison-item {
+  width: 80px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  flex: 1;
+  color: black;
+  text-align: center;
+}
+.emissions-comparison-item.low {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border: 1px solid #aaa;
+}
+.emissions-comparison-item.high {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #aaa;
+}
+.emissions-comparison-item.average {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+.emissions-comparison-item.low.selected {
+  background-color: lightgreen;
+}
+.emissions-comparison-item.average.selected {
+  background-color: cornflowerblue;
+}
+.emissions-comparison-item.high.selected {
+  background-color: lightcoral;
+}

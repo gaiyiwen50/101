@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import "./post.css";
+import { Link } from 'react-router-dom';
+import './post.css';
+import '../../shared.css';
 
 export default function Post({img, post, index}) {
   return (

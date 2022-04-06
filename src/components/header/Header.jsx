@@ -1,4 +1,5 @@
-import "./header.css";
+import './header.css';
+import '../../shared.css';
 
 export default function Header() {
   return (

@@ -3,6 +3,7 @@ import Homepage from "./pages/homepage/Homepage";
 import Single from "./pages/single/Single";
 import Reference from "./pages/reference/Reference";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './shared.css';
 
 const data = [
   { title: "Why is vehicular transmission a unique problem?", content: "c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1"},
@@ -12,7 +13,7 @@ const data = [
   { title: "q5", content: "c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1"}
 ]
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Topbar />
@@ -36,5 +37,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

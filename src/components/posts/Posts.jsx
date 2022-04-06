@@ -1,5 +1,6 @@
-import Post from "../post/Post";
-import "./posts.css";
+import Post from '../post/Post';
+import './posts.css';
+import '../../shared.css';
 
 export default function Posts({data}) {
   return (
