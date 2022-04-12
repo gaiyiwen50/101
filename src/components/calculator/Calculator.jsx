@@ -6,6 +6,7 @@ import './calculator.css';
 import '../../shared.css';
 
 export default class Calculator extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -17,6 +18,7 @@ export default class Calculator extends Component {
       emissionsCategory: 'average', // either 'low', 'average', or 'high'
     };
   }
+  
   handleChange = (event) => {
     // if (isNaN(event.target.value) || event.target.value <= 0) {
     //   this.setState({success: false});
@@ -25,10 +27,9 @@ export default class Calculator extends Component {
     // this.setState({value: event.target.value, success: true});
   }
   
-  handleFuelTypeChange = (event) => {
-    event.preventDefault()
-    console.log('changed fuel type to', event.target.innerText)
-    this.setState({fuelType: event.target.innerText})
+  handleFuelTypeChange = (fuelType) => {
+    console.log('changed fuel type to', fuelType)
+    this.setState({fuelType: fuelType})
   }
   handleMilesPerGallonChange = (event) => {
     event.preventDefault()
