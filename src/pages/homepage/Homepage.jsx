@@ -1,7 +1,7 @@
 import { useLocation } from "react-router";
 import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar";
+import Calculator from "../../components/calculator/Calculator";
 import "./homepage.css";
 
 export default function Homepage({data}) {
@@ -11,7 +11,7 @@ export default function Homepage({data}) {
     <>
       <Header />
       <div className="home">
-        <Sidebar />
+        <Calculator />
         <Posts data={data}/>
         
       </div>
