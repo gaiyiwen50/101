@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import FuelSelector from './FuelSelector';
+import Slider from './Slider';
 import CalculatorOutput from './CalculatorOutput';
 import './calculator.css';
 import '../../shared.css';
@@ -17,14 +18,6 @@ export default class Calculator extends Component {
       emissions: 0,
       emissionsCategory: 'average', // either 'low', 'average', or 'high'
     };
-  }
-  
-  handleChange = (event) => {
-    // if (isNaN(event.target.value) || event.target.value <= 0) {
-    //   this.setState({success: false});
-    //   return;
-    // }
-    // this.setState({value: event.target.value, success: true});
   }
   
   handleFuelTypeChange = (fuelType) => {
@@ -56,35 +49,27 @@ export default class Calculator extends Component {
   }
   
   render() {
-    return (
+    return (<>
       <div className={'calculator ' + (this.state.displayOutput ? 'enlarged' : '')}>
         
         <div className='calculator-input'>
           <h1 className='calculator-title'>Carbon Emissions Calculator</h1>
           
-          <form className='calculator-form'>
-            <FuelSelector selectedFuelType={this.state.fuelType} onChange={this.handleFuelTypeChange}></FuelSelector>
-            <div className='miles-per-gallon'>
-              <h3 className='calculator-form-label'>Miles per gallon:</h3>
-              <input type='range' min='0' max='100' value={this.state.milesPerGallon} onChange={this.handleMilesPerGallonChange} />
-            </div>
+          <form className='calculator-form' onSubmit={this.handleSubmit}>
             
-            <div className='miles-per-day'>
-              <h3 className='calculator-form-label'>Miles per day:</h3>
-              <input type='range' min='0' max='100' value={this.state.milesPerDay} onChange={this.handleMilesPerDayChange} />
-            </div>
+            <FuelSelector selectedFuelType={this.state.fuelType} onChange={this.handleFuelTypeChange} />
+            <Slider label={'Miles per gallon'} value={this.state.milesPerGallon} onChange={this.handleMilesPerGallonChange} />
+            <Slider label={'Miles per day'} value={this.state.milesPerDay} onChange={this.handleMilesPerDayChange} />
             
-            <button className='submit-button' onClick={this.handleSubmit}>
-              Calculate!
-            </button>
+            <input className='submit-button' type='submit' value='Calculate!' />
           </form>
         </div>
         
-        <div className={'vertical-divider ' + (this.state.displayOutput ? 'visible' : '')}></div>
+        <div className={'horizontal-divider ' + (this.state.displayOutput ? 'visible' : '')} />
         
-        <CalculatorOutput visible={this.state.displayOutput} emissions={1000} emissionsCategory={this.state.emissionsCategory}></CalculatorOutput>
+        <CalculatorOutput visible={this.state.displayOutput} emissions={1000} emissionsCategory={this.state.emissionsCategory} />
         
       </div>
-    );
+    </>);
   }
 }

@@ -9,17 +9,17 @@ export default function FuelSelector({selectedFuelType, onChange}) {
   return (
     <div className="fuel-type-selector">
       <h3 className="calculator-form-label">Fuel Type:</h3>
-        <div className="fuel-type-option-list">
-          {
-            fuelTypes.map((fuelType) => {
-              return (
-                <div className={'fuel-type-option ' + (fuelType === selectedFuelType ? 'selected' : '')} key={fuelType} onClick={() => onChange(fuelType)}>
-                  {fuelType}
-                </div>
-              )
-            })
-          }
-        </div>
+      <div className="fuel-type-option-list">
+        {
+          fuelTypes.map((fuelType) => {
+            return (
+              <div className={'fuel-type-option ' + (fuelType === selectedFuelType ? 'selected' : '')} key={fuelType} onClick={() => onChange(fuelType)}>
+                {fuelType}
+              </div>
+            )
+          })
+        }
+      </div>
     </div>
   );
 }

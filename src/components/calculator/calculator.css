@@ -1,23 +1,17 @@
 
-/* .calculator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-} */
 
 .calculator {
   background-color: white;
   border-radius: 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin: 40px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 50px 50px;
   width: 60%;
   box-shadow: 0px 4px 12px #ccc;
-  transition: all 1s linear;
+  /* transition: all 1s; */
 }
 .calculator.enlarged {
   /* width: 80%; */
@@ -27,32 +21,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .calculator-title {
   font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  content: open-quote;
 }
 
 .calculator-form {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 }
-.calculator-form > * {
-  margin-top: 20px;
+.calculator-form-body {
+  display: flex;
+  flex-direction: row;
 }
-.calculator-form-label {
-  margin-right: 40px;
-}
+
+
+
+/* FUEL TYPE AREA */
 
 .fuel-type-selector {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 .fuel-type-option-list {
   display: flex;
@@ -76,6 +73,40 @@
 
 
 
+/* SLIDER AREA */
+
+.calculator-form-label {
+  padding-right: 40px;
+  width: 12rem;
+  text-align: right;
+}
+
+.label-and-slider {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.slider-and-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.slider {
+  margin-right: 12px;
+}
+.slider-text-box {
+  flex-shrink: 0;
+  width: 4rem;
+}
+
+
+
+
+
+
+
 .miles-per-gallon {
   display: flex;
   align-items: center;
@@ -95,6 +126,7 @@
   color: white;
   border-radius: 10px;
   padding: 10px;
+  margin-top: 40px;
 }
 .submit-button:hover {
   background-color: rgb(236, 148, 148);
@@ -106,9 +138,12 @@
 
 
 
-/* Calculator Output */
+
+
+/* CALCULATOR OUTPUT */
 
 .calculator-output {
+  
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -118,32 +153,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  transition: all 1s linear;
+  
+  /* transition: position 1s, visibility 1s, opacity 1s 1s; */
+  transition: all 1s;
 }
 .calculator-output.visible {
   visibility: visible;
   opacity: 1;
   position: relative;
-  margin: 20px;
-  width: 20%;
 }
 
-.vertical-divider {
+.horizontal-divider {
+  
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  width: 1px;
-  height: 0%;
-  margin-left: 20px;
-  margin-right: 20px;
+  height: 1px;
+  width: 0%;
+  margin: 20px 0px;
   background-color: #ccc;
-  transition: all 1s linear;
+  
+  /* transition: position 1s, visibility 1s, opacity 1s 1s, width 1s 1s; */
+  transition: all 1s;
 }
-.vertical-divider.visible {
+.horizontal-divider.visible {
   visibility: visible;
   opacity: 1;
   position: relative;
-  height: 100%;
+  width: 100%;
 }
 
 
