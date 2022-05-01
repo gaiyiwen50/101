@@ -7,7 +7,7 @@ export default function FuelSelector({selectedFuelType, onChange}) {
   // const fuelTypes = ['Gasoline', 'Diesel', 'Electric']
   const fuelTypes = ['Gasoline', 'Diesel']
   
-  return (
+  return (<>
     <div className="fuel-type-selector">
       <h3 className="calculator-form-label">Fuel type:</h3>
       <div className="fuel-type-option-list">
@@ -22,5 +22,5 @@ export default function FuelSelector({selectedFuelType, onChange}) {
         }
       </div>
     </div>
-  );
+  </>)
 }

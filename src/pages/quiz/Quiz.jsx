@@ -13,7 +13,7 @@ const questions = [
     ],
     correctAnswer: 2,
     explanation: (<>
-      <p>Passenger cars are the largest source of transportation emissions in the US. They account for <a href='https://www.epa.gov/system/files/documents/2022-04/us-ghg-inventory-2022-main-text.pdf' target='_blank' rel='noopener noreferrer'>38% of transportation emissions</a>, beating out freight trucks at 26% and dwarfing aircrafts at under 8%.</p>
+      <p>Passenger cars are the largest source of transportation emissions in the US. They account for <a href='https://www.epa.gov/system/files/documents/2022-04/us-ghg-inventory-2022-main-text.pdf' target='_blank' rel='noopener noreferrer'>38% of transportation emissions</a>, beating freight trucks at 26% and dwarfing aircrafts at under 8%.</p>
     </>),
   },
   {

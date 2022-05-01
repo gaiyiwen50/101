@@ -14,9 +14,10 @@ export default class Calculator extends Component {
       displayOutput: false,
       fuelType: 'Gasoline',
       milesPerGallon: 25,
-      milesPerDay: 0,
+      milesPerDay: 12,
       carbonPerDay: 0,
       emissionsCategory: 'average', // either 'low', 'average', or 'high'
+      barrelsOfOilPerYear: 0,
     };
   }
   
@@ -61,6 +62,7 @@ export default class Calculator extends Component {
     // Formula: (carbon per gallon) / (miles per gallon) * (miles per day)
     const carbonPerDay = carbonPerGallon / this.state.milesPerGallon * this.state.milesPerDay
     
+    // The average vehicle emits 4.6 metric tons of CO2 per year
     var category
     if (carbonPerDay < 8) {
       category = 'low'
@@ -71,10 +73,15 @@ export default class Calculator extends Component {
     if (carbonPerDay >= 16) {
       category = 'high'
     }
-      
+    
+    // 430 kg CO2 per barrel
+    // https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references
+    const barrelsOfOilPerYear = carbonPerDay / 430.0 * 365.0
+    
     this.setState({
       carbonPerDay: carbonPerDay,
       emissionsCategory: category,
+      barrelsOfOilPerYear: barrelsOfOilPerYear,
     })
   }
   
@@ -97,7 +104,7 @@ export default class Calculator extends Component {
         
         <div className={'horizontal-divider ' + (this.state.displayOutput ? 'visible' : '')} />
         
-        <CalculatorOutput visible={this.state.displayOutput} emissions={this.state.carbonPerDay} emissionsCategory={this.state.emissionsCategory} />
+        <CalculatorOutput visible={this.state.displayOutput} emissions={this.state.carbonPerDay} emissionsCategory={this.state.emissionsCategory} barrelsOfOilPerYear={this.state.barrelsOfOilPerYear} />
         
       </div>
     </>);

@@ -47,13 +47,16 @@
 
 .fuel-type-selector {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
   width: 100%;
 }
 .fuel-type-option-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .fuel-type-option {
@@ -79,14 +82,14 @@
 
 .calculator-form-label {
   padding-right: 40px;
+  margin-bottom: 12px;
   width: 12rem;
-  text-align: right;
+  text-align: left;
 }
 
 .label-and-slider {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-top: 20px;
   width: 100%;
 }
@@ -94,13 +97,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
+}
+.slider-padding-left {
+  width: 4rem;
 }
 .slider {
   margin-right: 12px;
+  margin-left: 12px;
 }
 .slider-text-box {
-  flex-shrink: 0;
   width: 4rem;
 }
 
@@ -193,15 +198,17 @@
 
 .commute-cost {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 1.2rem;
 }
 .emissions-comparison-title {
   text-align: center;
+  font-size: 1.2rem;
 }
 .emissions-comparison-scale {
   display: flex;
-  margin-top: 6px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 .emissions-comparison-item {
   width: 80px;
@@ -233,4 +240,18 @@
 }
 .emissions-comparison-item.high.selected {
   background-color: lightcoral;
+}
+
+.oil-barrels-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.oil-barrels-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 80px;
+}
+.oil-barrel {
+  
 }
