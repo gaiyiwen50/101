@@ -11,17 +11,23 @@ export default function Post({post}) {
         alt=''
       />
       <div className='postInfo'>
-        <span className='postTitle'>
-          <Link to={post.link} className='link'>
+        {(post.content) ? (
+          <span className='postTitle'>
+          <a href={post.link} className='link'>
             {post.title}
-          </Link>
+          </a>
         </span>
+        ) : <span className='postTitle'>
+        <Link to={post.link} className='link'>
+          {post.title}
+        </Link>
+      </span>}
         <hr />
       </div>
       {(post.content) ? (
-        <p className='postDesc'>
-          {post.content}
-        </p>
+        <div className='postDesc'>
+          {post.content.map((item) => <li>{item}</li>)}
+        </div>
       ) : <></>}
     </div>
   );
