@@ -5,7 +5,7 @@ import '../../shared.css';
 
 export default function CalculatorOutput({visible, emissions, emissionsCategory, barrelsOfOilPerYear}) {
   
-  const oilBarrelsComponent = Array.from({length: Math.floor(barrelsOfOilPerYear)}, (_, index) => {
+  const oilBarrelsComponent = Array.from({length: Math.round(barrelsOfOilPerYear)}, (_, index) => {
     const style = {
       'margin-top': (index % 2 === 0) ? '0' : '60px',
       'z-index': (index % 2 === 0) ? '4' : '5',
