@@ -1,23 +1,16 @@
 
-/* .calculator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-} */
-
 .calculator {
   background-color: white;
   border-radius: 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin: 40px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 50px 50px;
   width: 60%;
   box-shadow: 0px 4px 12px #ccc;
-  transition: all 1s linear;
+  /* transition: all 1s; */
 }
 .calculator.enlarged {
   /* width: 80%; */
@@ -27,35 +20,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .calculator-title {
   font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  content: open-quote;
 }
 
 .calculator-form {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 }
-.calculator-form > * {
-  margin-top: 20px;
+.calculator-form-body {
+  display: flex;
+  flex-direction: row;
 }
-.calculator-form-label {
-  margin-right: 40px;
-}
+
+
+
+/* FUEL TYPE AREA */
 
 .fuel-type-selector {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  width: 100%;
 }
 .fuel-type-option-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .fuel-type-option {
   margin-right: 20px;
@@ -76,6 +78,43 @@
 
 
 
+/* SLIDER AREA */
+
+.calculator-form-label {
+  padding-right: 40px;
+  margin-bottom: 12px;
+  width: 12rem;
+  text-align: left;
+}
+
+.label-and-slider {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+.slider-and-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-padding-left {
+  width: 4rem;
+}
+.slider {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+.slider-text-box {
+  width: 4rem;
+}
+
+
+
+
+
+
+
 .miles-per-gallon {
   display: flex;
   align-items: center;
@@ -90,11 +129,13 @@
 
 .submit-button {
   cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
   background-color: lightcoral;
   border: none;
   color: white;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 30px;
+  margin-top: 40px;
 }
 .submit-button:hover {
   background-color: rgb(236, 148, 148);
@@ -106,9 +147,12 @@
 
 
 
-/* Calculator Output */
+
+
+/* CALCULATOR OUTPUT */
 
 .calculator-output {
+  
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -118,41 +162,53 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  transition: all 1s linear;
+  
+  /* transition: position 1s, visibility 1s, opacity 1s 1s; */
+  transition: all 1s;
 }
 .calculator-output.visible {
   visibility: visible;
   opacity: 1;
   position: relative;
-  margin: 20px;
-  width: 20%;
 }
 
-.vertical-divider {
+.horizontal-divider {
+  
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  width: 1px;
-  height: 0%;
-  margin-left: 20px;
-  margin-right: 20px;
+  height: 1px;
+  width: 0%;
+  margin: 40px 0px;
   background-color: #ccc;
-  transition: all 1s linear;
+  
+  /* transition: position 1s, visibility 1s, opacity 1s 1s, width 1s 1s; */
+  transition: all 1s;
 }
-.vertical-divider.visible {
+.horizontal-divider.visible {
   visibility: visible;
   opacity: 1;
   position: relative;
-  height: 100%;
+  width: 100%;
 }
 
 
+
+
+
+.commute-cost {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
 .emissions-comparison-title {
   text-align: center;
+  font-size: 1.2rem;
 }
 .emissions-comparison-scale {
   display: flex;
-  margin-top: 6px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 .emissions-comparison-item {
   width: 80px;
@@ -184,4 +240,18 @@
 }
 .emissions-comparison-item.high.selected {
   background-color: lightcoral;
+}
+
+.oil-barrels-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.oil-barrels-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 80px;
+}
+.oil-barrel {
+  
 }
