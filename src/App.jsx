@@ -1,12 +1,24 @@
-import Topbar from './components/topbar/Topbar';
-import Homepage from './pages/homepage/Homepage';
-import Single from './pages/single/Single';
-import Reference from './pages/reference/Reference';
-import Quiz from './pages/quiz/Quiz';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './shared.css';
+import Topbar from './components/topbar/Topbar'
+import Homepage from './pages/homepage/Homepage'
+import Single from './pages/single/Single'
+import Reference from './pages/reference/Reference'
+import Quiz from './pages/quiz/Quiz'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './shared.css'
 
 const data = [
+  {
+    title: 'Guide to Electric Vehicles',
+    image: 'https://aaaliving.acg.aaa.com/wp-content/uploads/2021/08/questions-about-electric-car-768x432.jpg',
+    content: ['Ever wanted to learn more about electric vehicles? Here is everything you need to know.'],
+    link: '/posts/electric-vehicles',
+  },
+  {
+    title: 'Guide to Carpooling',
+    image: 'https://511contracosta.org/wp-content/uploads/2020/08/carpool_header_retina.jpg',
+    content: ['An explainer about carpooling and a run-down of the most popular carpooling apps.'],
+    link: '/posts/carpooling',
+  },
   {
     title: 'Vehicular Emissions Quiz',
     image: 'https://media.istockphoto.com/photos/optical-form-of-an-examination-with-pencil-picture-id524069563?k=20&m=524069563&s=612x612&w=0&h=8XNQsZvit-djUXfho635QLTnlMpMSFLR2zi60HMggVU=',
@@ -57,11 +69,11 @@ export default function App() {
         <Route path='/homepage'>
           <Homepage data={data}/>
         </Route>
-        <Route path='/posts'>
-          <Homepage data={data}/>
+        <Route path='/posts/electric-vehicles'>
+          <Single/>
         </Route>
-        <Route path='/post/:id'>
-          <Single data={data}/>
+        <Route path='/posts/carpooling'>
+          <Single/>
         </Route>
         <Route path='/references'>
           <Reference />
@@ -71,5 +83,5 @@ export default function App() {
         </Route>
       </Switch>
     </Router>
-  );
+  )
 }

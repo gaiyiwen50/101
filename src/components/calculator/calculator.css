@@ -251,7 +251,15 @@
   flex-wrap: wrap;
   align-items: center;
   margin-left: 80px;
+  margin-top: 60px;
 }
 .oil-barrel {
   
+}
+
+.call-to-action {
+  margin-top: 60px;
+  width: 80%;
+  text-align: justify;
+  line-height: 1.4;
 }

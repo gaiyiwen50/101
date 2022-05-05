@@ -1,15 +1,15 @@
 
-import React, { Component } from 'react';
-import FuelSelector from './FuelSelector';
-import Slider from './Slider';
-import CalculatorOutput from './CalculatorOutput';
-import './calculator.css';
-import '../../shared.css';
+import React, { Component } from 'react'
+import FuelSelector from './FuelSelector'
+import Slider from './Slider'
+import CalculatorOutput from './CalculatorOutput'
+import './calculator.css'
+import '../../shared.css'
 
 export default class Calculator extends Component {
   
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       displayOutput: false,
       fuelType: 'Gasoline',
@@ -18,7 +18,7 @@ export default class Calculator extends Component {
       carbonPerDay: 0,
       emissionsCategory: 'average', // either 'low', 'average', or 'high'
       barrelsOfOilPerYear: 0,
-    };
+    }
   }
   
   handleFuelTypeChange = (fuelType) => {
@@ -56,7 +56,7 @@ export default class Calculator extends Component {
     const fuelTypeEmissions = {
       'Gasoline': 8.887,
       'Diesel': 10.180,
-      'Electric': 0.000,
+      'Electric': 3.5,
     }
     const carbonPerGallon = fuelTypeEmissions[this.state.fuelType]
     // Formula: (carbon per gallon) / (miles per gallon) * (miles per day)
@@ -107,6 +107,6 @@ export default class Calculator extends Component {
         <CalculatorOutput visible={this.state.displayOutput} emissions={this.state.carbonPerDay} emissionsCategory={this.state.emissionsCategory} barrelsOfOilPerYear={this.state.barrelsOfOilPerYear} />
         
       </div>
-    </>);
+    </>)
   }
 }

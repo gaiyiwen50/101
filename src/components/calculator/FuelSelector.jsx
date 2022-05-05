@@ -1,11 +1,11 @@
 
-import React from "react";
-import "./calculator.css";
+import React from "react"
+import "./calculator.css"
 
 export default function FuelSelector({selectedFuelType, onChange}) {
   
-  // const fuelTypes = ['Gasoline', 'Diesel', 'Electric']
-  const fuelTypes = ['Gasoline', 'Diesel']
+  const fuelTypes = ['Gasoline', 'Diesel', 'Electric']
+  // const fuelTypes = ['Gasoline', 'Diesel']
   
   return (<>
     <div className="fuel-type-selector">
